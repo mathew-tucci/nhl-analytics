@@ -90,6 +90,12 @@ class WebEndpoints:
         """Return current NHL awards."""
         return self.client.get("/awards")
 
+    # ---- Goal: player positions --------------------------------------
+    def get_goals(self):
+        # TODO: figure out if this should be called by another function
+        #       that gets the game...
+        return 0
+
 
 class EdgeEndpoints:
     """High-level methods for the NHL Edge stats API (api.nhle.com).
