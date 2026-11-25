@@ -1,3 +1,8 @@
+# deprecated for now; help_goal_demo.py seems to
+# work for this. Might want to explore leaving this here
+# but idk
+
+
 # Shows how to connect to the NHL Edge API
 # to get goal data for a specific game
 #
@@ -56,7 +61,7 @@ def main():
         #     # save or dump it to a file eventually
         #     breakpoint()
 
-
+    print(len(goals))
     import time
     time.sleep(1)    # try to space the requests?
     import requests
@@ -83,10 +88,14 @@ def main():
         print(f"Response was not valid JSON: {response.text[:200]}")
     # breakpoint()
 
+    # this isn
+
+    # dump the json to a file so it can be inspected!
+    json.dump(data)
+
         ###################################################
         # turn these into plots using mplhockey (optionally)
         # print(goal_sprite)
-
 
 
 

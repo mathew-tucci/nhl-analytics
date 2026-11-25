@@ -41,6 +41,7 @@
 import re
 import requests
 from bs4 import BeautifulSoup
+import json
 
 game_id = "2026020151"
 event_id = "336"
@@ -83,3 +84,7 @@ tracking_data = json_resp.json()
 print(f"Loaded {len(tracking_data)} frames")
 
 # breakpoint()
+
+# save the json data to inspect later
+with open('json_goal.json', 'w') as f:
+    json.dump(tracking_data, f)
