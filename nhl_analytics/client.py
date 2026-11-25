@@ -13,11 +13,12 @@ from typing import Any, Literal, Optional
 
 import requests
 
+# the sprite URL might be best w/o a base URL
 API_BASE_URLS = {
     "web": "https://api-web.nhle.com/v1",
     "edge": "https://api.nhle.com/stats/rest/en",
+    "sprites": "https://wsr.nhle.com/sprites/"
 }
-
 
 class NHLAPIError(Exception):
     """Raised when the NHL API returns an error response."""
@@ -42,7 +43,7 @@ class NHLClient:
 
     def __init__(
         self,
-        api: Literal["web", "edge"] = "web",
+        api: Literal["web", "edge", "sprites"] = "web",
         base_url: Optional[str] = None,
         timeout: float = 15.0,
         max_retries: int = 3,
